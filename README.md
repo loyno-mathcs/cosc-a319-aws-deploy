@@ -30,6 +30,8 @@ On this screen, at the top-right of the table, click the **View push commands** 
 
 ## Building the image
 
+### Building and running locally to test the image
+
 In most cases for this class, building the image locally will be as simple as running:
 
 ```{bash}
@@ -41,3 +43,17 @@ And running the image is simple also:
 ```{bash}
 docker-compose up
 ```
+
+Note that prior built layers of the Docker image can be used from layer cache, and will not need to be rebuilt. Because of this, subsequent image builds will usually be faster than the initial build.
+
+You should always build and run your image to test that the image built correctly and the application runs successfully before pushing the image to AWS ECR.
+
+### Building the image for deploy
+
+To build the image for deploy, follow the previously mentioned commands available from the ECR repository's image listing.
+
+You may need to replace `:latest` in some of the commands with a specific version number tag (i.e., `1.3.2`) if you choose. Otherwise, the `:latest` label will be re-assigned to the newly built image.
+
+### Setting up ECS
+
+_Coming soon..._
