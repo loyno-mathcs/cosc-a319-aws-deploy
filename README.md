@@ -1,37 +1,13 @@
-## Welcome to GitHub Pages
+## Deploying a containerized application on AWS Elastic Container Service using the Elastic Container Registry
 
-You can use the [editor on GitHub](https://github.com/loyno-mathcs/cosc-a319-aws-deploy/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### Prerequisites
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+First, you'll need an AWS account. You'll also need the AWS CLI installed on your computer. Once you've created your account, [follow the instructions here](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) to install the AWS CLI.
 
-### Markdown
+You'll also need to log into your AWS account through the AWS Console (in the web browser) to get new keys to use with the AWS CLI. Before creating credentials, take note of the region you're logged in for (for example `us-west-2` or `us-east-1`), which you can see in the top right menu section of the AWS Console display To do that, once logged in, go to the IAM service (in the Services menu at the top), click on your user, then click the Credentials tab. Create new credentials there, and be sure do download the CSV file and save both keys in a password keeper. **You will not be able to see the secret key through the console after you close the window showing it!**
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Once you've installed AWS CLI and created your credentials, in your command line, enter `aws configure`, and paste in the new credentials when asked. If it asks you for a default region, use the one you took note of in the prior step above.
 
-```markdown
-Syntax highlighted code block
+### Setting up ECR
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/loyno-mathcs/cosc-a319-aws-deploy/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+...
